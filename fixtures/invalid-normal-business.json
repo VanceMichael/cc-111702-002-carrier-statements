@@ -1,0 +1,49 @@
+[
+  {
+    "name": "月份不符",
+    "changes": {
+      "month": "2026-02"
+    }
+  },
+  {
+    "name": "收费身份重复",
+    "changes": {
+      "lines": [
+        {
+          "feeId": "F1",
+          "waybill": "W1",
+          "amount": 1
+        },
+        {
+          "feeId": "F1",
+          "waybill": "W2",
+          "amount": 2
+        }
+      ]
+    }
+  },
+  {
+    "name": "无归属收费",
+    "changes": {
+      "lines": [
+        {
+          "feeId": "F1",
+          "waybill": "",
+          "amount": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "非原始负费用",
+    "changes": {
+      "lines": [
+        {
+          "feeId": "F1",
+          "waybill": "W1",
+          "amount": -1
+        }
+      ]
+    }
+  }
+]
