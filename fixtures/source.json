@@ -24,6 +24,54 @@
           }
         }
       ]
+    },
+    {
+      "method": "GET",
+      "path": "/adjustments/V1",
+      "responses": [
+        {
+          "body": {
+            "id": "V1",
+            "amount": 300,
+            "feeId": "F1",
+            "status": "issued",
+            "applicationRefs": [
+              "AP1",
+              "AP2"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/applications/AP1",
+      "responses": [
+        {
+          "body": {
+            "applicationId": "AP1",
+            "voucher": "V1",
+            "statementId": "S-FEB",
+            "amount": 100,
+            "kind": "apply"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/applications/AP2",
+      "responses": [
+        {
+          "body": {
+            "applicationId": "AP2",
+            "voucher": "V1",
+            "statementId": "S-MAR",
+            "amount": 200,
+            "kind": "apply"
+          }
+        }
+      ]
     }
   ]
 }
