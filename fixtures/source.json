@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/statements/2026-01",
+      "responses": [
+        {
+          "body": {
+            "statementId": "S-JAN",
+            "month": "2026-01",
+            "lines": [
+              {
+                "feeId": "F1",
+                "waybill": "W1",
+                "amount": 1000
+              },
+              {
+                "feeId": "F2",
+                "waybill": "W1",
+                "amount": 200
+              }
+            ],
+            "adjustmentRefs": []
+          }
+        }
+      ]
+    }
+  ]
+}

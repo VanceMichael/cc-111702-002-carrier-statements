@@ -1,0 +1,10 @@
+{
+  "initial": {
+    "requestedMonths": {},
+    "statements": {}
+  },
+  "route": {
+    "method": "GET",
+    "path": "/statements/2026-01"
+  }
+}
