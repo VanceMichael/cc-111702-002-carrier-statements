@@ -27,6 +27,51 @@
     },
     {
       "method": "GET",
+      "path": "/statements/2026-02",
+      "responses": [
+        {
+          "body": {
+            "statementId": "S-FEB",
+            "month": "2026-02",
+            "lines": [
+              {
+                "feeId": "F3",
+                "waybill": "W2",
+                "amount": 800
+              }
+            ],
+            "adjustmentRefs": [
+              "V1",
+              "V2",
+              "V3",
+              "V4"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/statements/2026-03",
+      "responses": [
+        {
+          "body": {
+            "statementId": "S-MAR",
+            "month": "2026-03",
+            "lines": [
+              {
+                "feeId": "F4",
+                "waybill": "W3",
+                "amount": 600
+              }
+            ],
+            "adjustmentRefs": []
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
       "path": "/adjustments/V1",
       "responses": [
         {
@@ -35,9 +80,63 @@
             "amount": 300,
             "feeId": "F1",
             "status": "issued",
+            "issuedAt": 1770249600,
             "applicationRefs": [
               "AP1",
               "AP2"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/adjustments/V2",
+      "responses": [
+        {
+          "body": {
+            "id": "V2",
+            "amount": 150,
+            "feeId": "F2",
+            "status": "appealed",
+            "issuedAt": 1770336000,
+            "applicationRefs": [
+              "AP3"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/adjustments/V3",
+      "responses": [
+        {
+          "body": {
+            "id": "V3",
+            "amount": 80,
+            "feeId": "F1",
+            "status": "withdrawn",
+            "issuedAt": 1770422400,
+            "applicationRefs": []
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/adjustments/V4",
+      "responses": [
+        {
+          "body": {
+            "id": "V4",
+            "amount": 120,
+            "feeId": "F3",
+            "status": "reversed",
+            "issuedAt": 1770508800,
+            "applicationRefs": [
+              "AP4",
+              "AP5"
             ]
           }
         }
@@ -53,7 +152,8 @@
             "voucher": "V1",
             "statementId": "S-FEB",
             "amount": 100,
-            "kind": "apply"
+            "kind": "apply",
+            "appliedAt": 1770681600
           }
         }
       ]
@@ -68,7 +168,56 @@
             "voucher": "V1",
             "statementId": "S-MAR",
             "amount": 200,
-            "kind": "apply"
+            "kind": "apply",
+            "appliedAt": 1773100800
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/applications/AP3",
+      "responses": [
+        {
+          "body": {
+            "applicationId": "AP3",
+            "voucher": "V2",
+            "statementId": "S-FEB",
+            "amount": 60,
+            "kind": "apply",
+            "appliedAt": 1770768000
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/applications/AP4",
+      "responses": [
+        {
+          "body": {
+            "applicationId": "AP4",
+            "voucher": "V4",
+            "statementId": "S-FEB",
+            "amount": 120,
+            "kind": "apply",
+            "appliedAt": 1770854400
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/applications/AP5",
+      "responses": [
+        {
+          "body": {
+            "applicationId": "AP5",
+            "voucher": "V4",
+            "statementId": "S-FEB",
+            "amount": 120,
+            "kind": "reverse",
+            "appliedAt": 1771545600
           }
         }
       ]

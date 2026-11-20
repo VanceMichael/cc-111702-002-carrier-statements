@@ -1,10 +1,23 @@
 {
   "initial": {
     "requestedMonths": {},
-    "statements": {}
+    "statements": {},
+    "vouchers": {},
+    "applications": {},
+    "gaps": {}
   },
-  "route": {
-    "method": "GET",
-    "path": "/statements/2026-01"
+  "routes": {
+    "statement": {
+      "method": "GET",
+      "path": "/statements/:month"
+    },
+    "adjustment": {
+      "method": "GET",
+      "path": "/adjustments/:id"
+    },
+    "application": {
+      "method": "GET",
+      "path": "/applications/:id"
+    }
   }
 }
